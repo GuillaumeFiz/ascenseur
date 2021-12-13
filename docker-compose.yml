@@ -1,0 +1,14 @@
+
+version: '3.5'
+
+services:
+
+  ascenseur_app:
+    image: ascenseur_app:latest
+    container_name: "ascenseur_app"
+    build:
+      context: ./
+      dockerfile: dockerfile
+    volumes:
+      - "./src:/app/src"
+    tty: true
